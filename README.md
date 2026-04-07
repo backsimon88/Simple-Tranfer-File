@@ -60,6 +60,8 @@ Output:
 
 Windows packaging should be run on a Windows machine.
 
+If you do not have a Windows machine, GitHub Actions can build it for you from the repository's Actions tab.
+
 Quick build:
 
 ```bat
@@ -77,6 +79,18 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "Compress-Archive -Path '
 Output:
 - `dist\Simple Transfer File Server\Simple Transfer File Server.exe`
 - `release\Simple-Transfer-File-Server-Windows.zip`
+
+## Download Windows Build From GitHub
+
+After pushing to `main` or manually running the workflow in the Actions tab:
+
+1. Open the `Build Windows Package` workflow
+2. Open the latest successful run
+3. Download the `Simple-Transfer-File-Server-Windows` artifact
+
+That artifact contains:
+- `Simple Transfer File Server.exe`
+- `Simple-Transfer-File-Server-Windows.zip`
 
 ## Use Prebuilt App
 

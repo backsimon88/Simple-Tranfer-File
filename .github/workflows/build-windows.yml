@@ -1,0 +1,44 @@
+name: Build Windows Package
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - main.py
+      - server_http.py
+      - server_tftp.py
+      - build_windows.bat
+      - requirements-build-windows.txt
+      - Simple Transfer File Server.spec
+      - .github/workflows/build-windows.yml
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install build dependencies
+        run: py -m pip install -r requirements-build-windows.txt
+
+      - name: Build Windows package
+        shell: cmd
+        run: build_windows.bat
+
+      - name: Upload Windows package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Simple-Transfer-File-Server-Windows
+          path: |
+            release/Simple-Transfer-File-Server-Windows.zip
+            dist/Simple Transfer File Server/Simple Transfer File Server.exe
+          if-no-files-found: error
