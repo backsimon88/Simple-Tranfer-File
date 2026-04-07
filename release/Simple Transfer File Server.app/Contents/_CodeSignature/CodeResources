@@ -310,10 +310,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			QEO6OdHXAZCe+rUKsq6Yw35NKns=
+			TFxqv9JDJDTUXxuf7g6MfbNsnKs=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"4043ba39d1d701909efab50ab2ae98c37e4d2a7b"</string>
+			<string>cdhash H"4c5c6abfd2432434d45f1b9fee0e8c7db36c9cab"</string>
 		</dict>
 		<key>Resources/PythonApplet.icns</key>
 		<dict>
