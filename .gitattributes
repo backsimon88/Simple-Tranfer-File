@@ -1,0 +1,7 @@
+# Binary files - no line ending conversion
+*.exe binary
+*.zip binary
+*.app binary
+*.dylib binary
+*.so binary
+*.dll binary
