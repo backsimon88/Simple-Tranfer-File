@@ -1,10 +1,13 @@
 """
-py2app build script for Simple Transfer File Server.
+macOS build script for Simple Transfer File Server.
 
 Usage:
     python setup.py py2app
 
 Output: dist/Simple Transfer File Server.app
+
+For Windows packaging, use PyInstaller with:
+    pyinstaller "Simple Transfer File Server.spec"
 """
 
 from setuptools import setup
